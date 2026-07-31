@@ -2,8 +2,6 @@ Edith Homelab
 
 > Infrastructure as Code for Edith.
 
-## Philosophy
-
 Edith is a self-hosted homelab built using Docker.
 The goal is that a completely fresh Ubuntu-server installation can become Edith by running a single installer.
 
@@ -29,15 +27,22 @@ The goal is that a completely fresh Ubuntu-server installation can become Edith 
 ## Repo structure
 
 edith-homelab/
-│
 ├── README.md
 ├── LICENSE
 ├── .gitignore
 │
 ├── docker/
 │   ├── homepage/
-│   ├── immich/
+│   │   ├── docker-compose.yml
+│   │   ├── services.yaml
+│   │   ├── widgets.yaml
+│   │   └── settings.yaml
+│   │
 │   ├── jarvis/
+│   │   ├── docker-compose.yml
+│   │   └── Dockerfile
+│   │
+│   ├── immich/
 │   ├── nextcloud/
 │   ├── gitea/
 │   ├── portainer/
@@ -45,8 +50,5 @@ edith-homelab/
 │   └── glances/
 │
 ├── docs/
-│
 ├── scripts/
-│
 └── backups/
-    └── .gitkeep
