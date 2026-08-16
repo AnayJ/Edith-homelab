@@ -9,7 +9,7 @@ services:
       USER_GID: 1000
 
     volumes:
-      - ./data:/data
+      - /opt/edith/data/gitea:/data
 
     ports:
       - "3002:3000"
