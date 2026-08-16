@@ -1,0 +1,18 @@
+services:
+  battery-api:
+    build: .
+    container_name: battery-api
+    restart: unless-stopped
+
+    ports:
+      - "9000:9000"
+
+    volumes:
+      - /sys/class/power_supply:/sys/class/power_supply:ro
+
+    networks:
+      - homelab
+
+networks:
+  homelab:
+    external: true
