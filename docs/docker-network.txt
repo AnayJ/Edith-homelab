@@ -1,0 +1,32 @@
+EDITH HOMELAB DOCKER NETWORK
+============================
+
+Network name:
+homelab
+
+Driver:
+bridge
+
+IPv4:
+enabled
+
+IPv6:
+disabled
+
+Subnet:
+172.20.0.0/16
+
+Gateway:
+172.20.0.1
+
+Create command:
+docker network create \
+  --driver bridge \
+  --subnet 172.20.0.0/16 \
+  homelab
+
+Notes:
+- This is an external Docker network.
+- Services that need to communicate with each other join this network.
+- Container IP addresses should NOT be hardcoded because Docker assigns them dynamically.
+- The gateway 172.20.0.1 is used by containers to access services running on the Edith host.
