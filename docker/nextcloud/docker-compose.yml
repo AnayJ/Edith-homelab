@@ -1,0 +1,18 @@
+services:
+  nextcloud:
+    image: nextcloud:latest
+    container_name: nextcloud
+    restart: unless-stopped
+
+    ports:
+      - "8080:80"
+
+    volumes:
+      - ./nextcloud:/var/www/html
+
+    networks:
+      - homelab
+
+networks:
+  homelab:
+    external: true
