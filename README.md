@@ -46,9 +46,7 @@ Ubuntu Server
 | **[Glances](https://nicolargo.github.io/glances/)** | Real-time system monitoring |
 | **Battery API** | Custom API for Edith host battery metrics |
 
-> **Notes:**
-> - **Jarvis:** Maintained in a separate repository ([`Jarvis-AI-Assistant`](#jarvis-integration)).
-> - **Nginx Proxy Manager:** Configured but intentionally excluded from default setup until domain provisioning is complete.
+
 
 ---
 
@@ -66,9 +64,6 @@ Edith-homelab/
 │   ├── nextcloud/
 │   ├── portainer/
 │   └── uptime-kuma/
-│
-├── docs/
-│   └── jarvis-install.txt
 │
 ├── scripts/
 │   ├── bootstrap.sh
