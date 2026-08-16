@@ -20,6 +20,7 @@ Gateway:
 172.20.0.1
 
 Create command:
+
 docker network create \
   --driver bridge \
   --subnet 172.20.0.0/16 \
@@ -28,5 +29,6 @@ docker network create \
 Notes:
 - This is an external Docker network.
 - Services that need to communicate with each other join this network.
-- Container IP addresses should NOT be hardcoded because Docker assigns them dynamically.
-- The gateway 172.20.0.1 is used by containers to access services running on the Edith host.
+- Container IP addresses are assigned dynamically by Docker.
+- Do not hardcode container IP addresses.
+- The gateway 172.20.0.1 allows containers to access services running on the Edith host.

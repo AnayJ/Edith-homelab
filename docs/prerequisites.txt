@@ -1,0 +1,39 @@
+EDITH HOMELAB — HOST PREREQUISITES
+===================================
+
+Operating System:
+Ubuntu Server
+
+Architecture:
+x86_64
+
+Required:
+- Docker Engine
+- Docker Compose
+- Git
+- curl
+- systemd
+
+Docker:
+- Docker service must be enabled
+- Docker service must be running
+
+Docker Compose:
+- Compose v2+ required
+
+Docker network:
+- Name: homelab
+- Driver: bridge
+- IPv4 subnet: 172.20.0.0/16
+- Gateway: 172.20.0.1
+- IPv6: disabled
+
+Host requirements:
+- Internet connection
+- Sufficient disk space for application data
+- Sufficient RAM for running all services
+
+Notes:
+- Persistent application data must NOT be stored in Git.
+- Secrets/passwords must NOT be committed to Git.
+- Container IP addresses must NOT be hardcoded.
